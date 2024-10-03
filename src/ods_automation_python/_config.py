@@ -11,7 +11,9 @@ def _check_all_environment_variables_are_set():
                              "PROXY_USER",
                              "PROXY_PASSWORD",
                              "PROXY_ADDRESS",
-                             "PROXY_PORT"]
+                             "PROXY_PORT",
+                             "ODS_DOMAIN",
+                             "ODS_API_TYPE"]
 
     for environment_variable in environment_variables:
         ev = os.getenv(environment_variable)
@@ -35,10 +37,15 @@ def _get_proxies() -> dict[str, str]:
     }
     return proxies
 
-# Example of how to use the function
-if __name__ == "__main__":
-    try:
-        api_key = _get_api_key()
-        print(f"API Key: {api_key}")
-    except (FileNotFoundError, ValueError) as e:
-        print(e)
+def _get_ods_url() -> str:
+    """
+    Constructs the ODS (Open Data Service) API URL based on environment variables.
+
+    Returns:
+        str: The constructed ODS API URL **without** trailing slash ('/'): https://<ODS_DOMAIN>/api/<ODS_API_TYPE>
+    """
+    _ods_domain = os.getenv('ODS_DOMAIN')
+    _ods_api_type = os.getenv('ODS_API_TYPE')
+    _url_no_prefix = f"{_ods_domain}/api/{_ods_api_type}".replace("//", "/")
+    _url = "https://" + _url_no_prefix
+    return _url
