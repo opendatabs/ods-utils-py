@@ -21,6 +21,23 @@ def _check_all_environment_variables_are_set():
             raise ValueError(f"{environment_variable} not found in the .env file. "
                              f"Please define it as '{environment_variable}'.")
 
+
+def get_base_url() -> str:
+    return _get_ods_url()
+
+def _get_ods_url() -> str:
+    """
+    Constructs the ODS (Open Data Service) API URL based on environment variables.
+
+    Returns:
+        str: The constructed ODS API URL **without** trailing slash ('/'): https://<ODS_DOMAIN>/api/<ODS_API_TYPE>
+    """
+    _ods_domain = os.getenv('ODS_DOMAIN')
+    _ods_api_type = os.getenv('ODS_API_TYPE')
+    _url_no_prefix = f"{_ods_domain}/api/{_ods_api_type}".replace("//", "/")
+    _url = "https://" + _url_no_prefix
+    return _url
+
 def _get_headers():
     _api_key = os.getenv('API_KEY')
     _headers = {'Authorization': f'apikey {_api_key}'}
@@ -38,16 +55,3 @@ def _get_proxies() -> dict[str, str]:
         "https": proxy,
     }
     return proxies
-
-def _get_ods_url() -> str:
-    """
-    Constructs the ODS (Open Data Service) API URL based on environment variables.
-
-    Returns:
-        str: The constructed ODS API URL **without** trailing slash ('/'): https://<ODS_DOMAIN>/api/<ODS_API_TYPE>
-    """
-    _ods_domain = os.getenv('ODS_DOMAIN')
-    _ods_api_type = os.getenv('ODS_API_TYPE')
-    _url_no_prefix = f"{_ods_domain}/api/{_ods_api_type}".replace("//", "/")
-    _url = "https://" + _url_no_prefix
-    return _url

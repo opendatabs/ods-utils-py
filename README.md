@@ -3,3 +3,4 @@ Mit `odsAutomationPython` lässt sich direkt aus Python auf die Automation API v
 
 ## TODOs
 - README.md schreiben
+- Add logging

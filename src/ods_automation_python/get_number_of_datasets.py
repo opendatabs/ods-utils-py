@@ -1,9 +1,8 @@
 from ._requests_utils import *
+from ._config import get_base_url
 
 __all__ = ["get_number_of_datasets"]
 
 def get_number_of_datasets():
-    print("Trying to receive count of all datasets")
     r = requests_get(url=f"{get_base_url()}/datasets/")
-    print(r.json()['total_count'])
-    pass
+    return r.json()['total_count']
