@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 
-def get_api_key(env_file=".env"):
+def _get_api_key(env_file=".env"):
 
     # Load the environment variables from the specified .env file
     if not os.path.exists(env_file):
@@ -21,7 +21,7 @@ def get_api_key(env_file=".env"):
 # Example of how to use the function
 if __name__ == "__main__":
     try:
-        api_key = get_api_key()
+        api_key = _get_api_key()
         print(f"API Key: {api_key}")
     except (FileNotFoundError, ValueError) as e:
         print(e)
