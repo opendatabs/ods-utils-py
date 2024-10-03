@@ -1,3 +1,6 @@
+'''
+This module is responsible for loading environment variables from the .env file.
+'''
 import os
 
 from dotenv import load_dotenv
@@ -20,6 +23,8 @@ def _check_all_environment_variables_are_set():
         if not ev:
             raise ValueError(f"{environment_variable} not found in the .env file. "
                              f"Please define it as '{environment_variable}'.")
+        if ev == "your_" + environment_variable.lower():
+            raise ValueError(f"Please define the environment variable '{environment_variable}' in the .env file.")
 
 
 def get_base_url() -> str:
