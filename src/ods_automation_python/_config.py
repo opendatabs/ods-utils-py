@@ -21,8 +21,10 @@ def _check_all_environment_variables_are_set():
             raise ValueError(f"{environment_variable} not found in the .env file. "
                              f"Please define it as '{environment_variable}'.")
 
-def _get_api_key():
-    return os.getenv('API_KEY')
+def _get_headers():
+    _api_key = os.getenv('API_KEY')
+    _headers = {'Authorization': f'apikey {_api_key}'}
+    return _headers
 
 def _get_proxies() -> dict[str, str]:
     proxy_user = os.getenv("PROXY_USER")
