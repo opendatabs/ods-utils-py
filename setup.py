@@ -15,7 +15,7 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     description="A Python package to automate ODS tasks.",
-    author="Rstam Aloush",
+    author="Rstam ALOUSH",
     author_email="rstam.aloush@bs.ch",
     install_requires=requirements_list,
     license=license_text,
