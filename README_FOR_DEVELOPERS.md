@@ -8,7 +8,6 @@ This guide provides instructions on setting up the development environment, addi
 - [Installation Instructions](#installation-instructions)
 - [Adding New Functions](#adding-new-functions)
 - [Commit Message Guidelines](#commit-message-guidelines)
-- [License](#license)
 
 ---
 
@@ -64,6 +63,13 @@ It is recommended to create and use a virtual environment for local development.
    pip install -r requirements.txt
    ```
 
+<!-- 
+1. **Check out develop branch**
+   ```bash
+   git checkout develop (?)
+   ```
+-->
+
 **Make sure to:** 
 - activate the virtual environment before running ```pip``` commands 
 - run python from 
@@ -111,9 +117,3 @@ Commit messages should be meaningful and follow a clear format. Each commit mess
 - `Add new function get_number_of_datasets`
 
 This format helps maintain clarity and readability in the commit history.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file in the repository for the full license text.
