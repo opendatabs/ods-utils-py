@@ -24,7 +24,16 @@ This guide provides instructions on setting up the development environment, addi
    cd ods-utils-py
    ```
 
-3. **Set Up Environment Variables**
+3. **Ensure You Are on the `develop` Branch**
+   ```bash
+   git checkout develop
+   ```
+
+   *Note:* If `develop` is already the default branch, you are already on it after cloning. This step ensures you are on the correct branch if multiple branches exist.
+   
+   **IMPORTANT:** Never push directly to the `main` branch!
+
+4. **Set Up Environment Variables**
    Copy your [`.env.template`](.env.template) and rename it to `.env`:
    - **Windows**
      ```cmd
@@ -42,7 +51,7 @@ This guide provides instructions on setting up the development environment, addi
 
 It is recommended to create and use a virtual environment for local development. Follow the steps below to set up the environment based on your operating system:
 
-4. **Create Virtual Environment**
+5. **Create Virtual Environment**
    ```bash
    python -m venv .venv
    ```
@@ -64,13 +73,6 @@ It is recommended to create and use a virtual environment for local development.
    pip install -r requirements.txt
    ```
 
-<!-- 
-1. **Check out develop branch**
-   ```bash
-   git checkout develop (?)
-   ```
--->
-
 **Make sure to:** 
 - activate the virtual environment before running ```pip``` commands 
 - run python from 
@@ -82,13 +84,13 @@ This will install all the necessary dependencies for local development.
 
 ## Installation Instructions
 
-To install the package in a separate folder for testing purposes, run:
+To install the package for testing purposes, run:
 
 ```bash
-pip install -e <path/to/this/folder>
+pip install -e .
 ```
 
-Using the `-e` (editable) flag ensures that the package needs to be installed only once and remains up-to-date with the version that is currently loaded from the source folder.
+Using the `-e` (editable) flag ensures that the package needs to be installed only once via pip and remains up-to-date with the current version in the source folder.
 
 ---
 
