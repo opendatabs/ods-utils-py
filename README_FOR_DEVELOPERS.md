@@ -1,4 +1,4 @@
-# Developer Guide for `ods_automation_python`
+# Developer Guide for `ods_utils_py`
 
 This guide provides instructions on setting up the development environment, adding new functions, and contributing code to this repository.
 
@@ -16,16 +16,16 @@ This guide provides instructions on setting up the development environment, addi
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/rstam-aloush/odsAutomationPython.git
+   git clone https://github.com/rstam-aloush/ods-utils-py.git
    ```
 
 2. **Change to the Project Directory**
    ```bash
-   cd odsAutomationPython
+   cd ods-utils-py
    ```
 
 3. **Set Up Environment Variables**
-   Copy your [`.env.template`](.env.template) and rename it to `.env`
+   Copy your [`.env.template`](.env.template) and rename it to `.env`:
    - **Windows**
      ```cmd
      copy .env.template .env
