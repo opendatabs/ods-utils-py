@@ -101,7 +101,7 @@ When adding a new function to the package, use the following steps to ensure con
 1. Copy the template file: `src/ods_utils_py/get_number_of_datasets.py`.
 2. Follow the structure and code style present in the template when implementing the new function.
 3. Document the function with clear and concise docstrings following standard Python conventions (e.g., describing arguments, return values, and any exceptions raised) **where deemed necessary**.
-<!--4. Add unit tests. Check out the file `tests/test_get_number_of_datasets.py` as a reference.-->
+Add unit tests. Check out the file `tests/test_get_number_of_datasets.py` as a reference.
 
 ---
 
