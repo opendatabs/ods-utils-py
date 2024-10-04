@@ -10,7 +10,7 @@ with open("README.md", "r") as f:
     readme_text = f.read()
 
 setup(
-    name="ods_automation_python",
+    name="ods_utils_py",
     version="0.1.0",
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
