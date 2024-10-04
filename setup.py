@@ -14,7 +14,7 @@ setup(
     version="0.1.0",
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
-    description="A Python package to automate ODS tasks.",
+    description="A Python package for interacting with OpenDataSoft (ODS) platforms.",
     author="Rstam ALOUSH",
     author_email="rstam.aloush@bs.ch",
     install_requires=requirements_list,
