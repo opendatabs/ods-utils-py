@@ -8,6 +8,7 @@ This guide provides instructions on setting up the development environment, addi
 - [Installation Instructions](#installation-instructions)
 - [Adding New Functions](#adding-new-functions)
 - [Commit Message Guidelines](#commit-message-guidelines)
+- [Function Naming Conventions](#function-naming-conventions)
 
 ---
 
@@ -117,3 +118,24 @@ Commit messages should be meaningful and follow a clear format. Each commit mess
 - `Add new function get_number_of_datasets`
 
 This format helps maintain clarity and readability in the commit history.
+
+---
+
+## Function Naming Conventions
+
+As our project grows, we may introduce specific naming conventions for functions to ensure consistency and improve code navigation. Currently, we don't have strict rules, but we recommend following these general guidelines:
+
+1. Use lowercase letters and underscores for function names (snake_case).
+2. Choose descriptive names that clearly indicate the function's purpose.
+3. Prefer verb-noun combinations for action-oriented functions.
+
+Examples of good function names:
+- `get_dataset_info`
+- `calculate_average_score`
+- `validate_user_input`
+
+We may introduce more specific conventions in the future, such as prefixes or suffixes for certain types of functions. As these conventions are established, they will be documented here.
+
+**Note:** This section will be updated with more detailed conventions as the project evolves and requires additional structure.
+
+---
