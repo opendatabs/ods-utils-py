@@ -1,6 +1,7 @@
-'''
+"""
 This module is responsible for loading environment variables from the .env file.
-'''
+"""
+
 import os
 
 from dotenv import load_dotenv

@@ -1,3 +1,8 @@
+"""
+This module provides utility functions for making HTTP requests with retry functionality.
+It wraps the requests library methods with custom error handling and configuration.
+"""
+
 import requests
 import urllib3, ssl
 
