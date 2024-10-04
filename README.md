@@ -3,6 +3,30 @@ Mit `ods-utils-py` lässt sich direkt aus Python auf die Automation API von Open
 
 ---
 
+## Installation
+
+Installation with
+```bash
+pip install ods-utils-py
+```
+
+---
+
+## Dependencies
+
+TODO
+
+---
+
+## Usage
+
+```python
+import ods_utils_py as ods_utils
+
+num_datasets = ods_utils.get_number_of_datasets()
+print(f"Currently we have {num_datasets} datasets.") 
+```
+---
 
 ## License
 
