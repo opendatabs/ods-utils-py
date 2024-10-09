@@ -28,9 +28,6 @@ This guide provides instructions on setting up the development environment, addi
    ```bash
    git checkout develop
    ```
-
-   *Note:* If `develop` is already the default branch, you are already on it after cloning. This step ensures you are on the correct branch if multiple branches exist.
-   
    **IMPORTANT:** Never push directly to the `main` branch!
 
 4. **Set Up Environment Variables**
@@ -134,11 +131,7 @@ As our project grows, we may introduce specific naming conventions for functions
 
 Examples of good function names:
 - `get_dataset_info`
-- `calculate_average_score`
+- `update_dataset_licences`
 - `validate_user_input`
-
-We may introduce more specific conventions in the future, such as prefixes or suffixes for certain types of functions. As these conventions are established, they will be documented here.
-
-**Note:** This section will be updated with more detailed conventions as the project evolves and requires additional structure.
 
 ---
