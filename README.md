@@ -8,7 +8,7 @@ Mit `ods-utils-py` lässt sich direkt aus Python auf die Automation API von Open
    - [Voraussetzungen](#voraussetzungen)
    - [Erste Schritte](#erste-schritte)
      - [API-Schlüssel einrichten](#api-schlüssel-einrichten)
-     [Verwendung](#verwendung)
+   - [Verwendung](#verwendung)
    - [Weiterführende Links](#weiterführende-links)
    - [Lizenz](#lizenz)
 
