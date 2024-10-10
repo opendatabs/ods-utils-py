@@ -4,7 +4,7 @@ from ._config import get_base_url
 
 def get_dataset_custom_view(dataset_id: int = None, dataset_uid: str = None) -> dict:
     """
-    Returns a custom_view distionary
+    Returns a custom_view dictionary. Can be specified by either the dataset_id or the dataset_uid.
     Args:
         dataset_id:
         dataset_uid:
