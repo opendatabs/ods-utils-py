@@ -1,4 +1,4 @@
-from . import get_uid_by_id
+from .get_uid_by_id import get_uid_by_id
 from ._requests_utils import *  # imports requests_get, requests_post, etc.
 from ._config import get_base_url
 
