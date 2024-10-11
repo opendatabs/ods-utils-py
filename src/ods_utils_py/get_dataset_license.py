@@ -39,6 +39,9 @@ def get_dataset_license(dataset_id: int = None, dataset_uid: str = None,
         dataset_uid = get_uid_by_id(dataset_id)
     base_url = get_base_url()
 
+    if no_license_default_value in _currently_valid_ids:
+        exit(f"Error: no_license_default_value ({no_license_default_value}) must not appear in {_currently_valid_ids}")
+
     r = requests_get(url=f"{base_url}/datasets/{dataset_uid}")
 
     if not r.ok:
@@ -47,7 +50,7 @@ def get_dataset_license(dataset_id: int = None, dataset_uid: str = None,
     lic_text = r.json()['metadata']['internal'].get('license_id', {}).get('value', no_license_default_value)
 
 
-    if lic_text not in _currently_valid_ids:
+    if lic_text not in _currently_valid_ids and lic_text not in no_license_default_value:
         raise ValueError(f"Unknown license id {lic_text} received. Currently valid ids are: {_currently_valid_ids}")
 
     return lic_text
