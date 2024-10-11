@@ -24,7 +24,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.12',
+    python_requires='>=3.11',
     long_description=readme_text,
     long_description_content_type="text/markdown",
     url='https://github.com/rstam-aloush/odsAutomationPython/'
