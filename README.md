@@ -79,11 +79,11 @@ Falls eine gewünschte Funktion nicht existiert, kann sie über _requests_utils 
 ```python
 import ods_utils_py as ods_utils
 
-antwort = ods_utils.requests_get("https://www.example.com")
+antwort = ods_utils._requests_get("https://www.example.com")
 print(antwort.text)
 ```
 
-*Hinweis:* Die meisten dieser Funktionen sollen dann langfristig in `ods_utils_py` integriert werden.
+*Hinweis:* Die meisten dieser Funktionen sollten dann langfristig in `ods_utils_py` integriert werden.
 
 ---
 
