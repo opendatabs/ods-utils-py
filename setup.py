@@ -15,8 +15,8 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     description="A Python package for interacting with OpenDataSoft (ODS) platforms.",
-    author="Rstam ALOUSH",
-    author_email="rstam.aloush@bs.ch",
+    author="Renato FARRUGGIO",
+    author_email="renato.farruggio@bs.ch",
     install_requires=requirements_list,
     license=license_text,
     classifiers=[
@@ -27,5 +27,5 @@ setup(
     python_requires='>=3.12',
     long_description=readme_text,
     long_description_content_type="text/markdown",
-    #url='https://github.com/rstam-aloush/odsAutomationPython/'
+    url='https://github.com/rstam-aloush/odsAutomationPython/'
 )
