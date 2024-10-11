@@ -11,7 +11,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="ods_utils_py",
-    version="0.1.0",
+    version="0.1.1",
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     description="A Python package for interacting with OpenDataSoft (ODS) platforms.",
