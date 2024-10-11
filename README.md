@@ -1,5 +1,5 @@
 # ods-utils-py
-Mit `ods-utils-py` lässt sich direkt aus Python auf die Automation API von Opendatasoft zugreifen. Voraussetzung ist der Besitz eines gültigen API Schlüssels ([API-Schlüssel erstellen](#api-schlüssel-einrichten)).
+Mit `ods-utils-py` lässt sich direkt aus Python auf die Automation API von Opendatasoft zugreifen. Voraussetzung ist der Besitz eines gültigen API Schlüssels ([API-Schlüssel erstellen](#api-schlüssel-einrichten)). [Der Quellcode ist öffentlich auf Github](https://github.com/RenatoFarruggio/ods-utils-py).
 
 
 ## Inhaltsverzeichnis
@@ -52,16 +52,19 @@ Der API Key benötigt die folgenden 4 Berechtigungen:
 Der API Key wird nun als Umgebungsvariable benötigt.
 
 ### Umgebungsvariablen einrichten
-   Die [`.env.template`](.env.template) Datei kopieren und in `.env` umbenennen:
-   - **Windows**
-     ```cmd
-     copy .env.template .env
-     ```
-   - **Mac/Linux**
-     ```bash
-     cp .env.template .env
-     ```
-   Anschliessend die `.env` Datei öffnen und mit den erforderlichen Zugangsdaten und Informationen ausfüllen.
+Als nächstes müssen die Umgebungsvariablen definiert werden. Dafür sollte im Root-Verzeichnis eine `.env` Datei erstellt werden mit dem folgenden Inhalt, bzw. falls schon eine solche Datei existiert, die folgenden Zeilen ergänzt und ausgefüllt werden.
+
+```text
+API_KEY=your_api_key
+
+PROXY_USER=your_proxy_user
+PROXY_PASSWORD=your_proxy_password
+PROXY_ADDRESS=your_proxy_address
+PROXY_PORT=your_proxy_port
+
+ODS_DOMAIN=data.bs.ch
+ODS_API_TYPE=automation/v1.0
+```
 
 ## Verwendung
 

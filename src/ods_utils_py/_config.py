@@ -11,7 +11,7 @@ if not os.path.exists(".env"):
     raise FileNotFoundError("The .env file does not exist.")
 
 def _check_all_environment_variables_are_set():
-    environment_variables = ["API_KEY",
+    environment_variables = ["ODS_API_KEY",
                              "PROXY_USER",
                              "PROXY_PASSWORD",
                              "PROXY_ADDRESS",
