@@ -43,10 +43,11 @@ Für die Key-Erstellung auf anderen Plattformen kann oben rechts auf die Schaltf
 
 Der Name sollte beschreiben wofür er verwendet wird, beispielsweise `"ods_utils_py - <Initialer Name des Keys>"`
 
-Der API Key benötigt die folgenden 3 Berechtigungen:
+Der API Key benötigt die folgenden 4 Berechtigungen:
 - Alle Datensätze durchsuchen
 - Neue Datensätze erstellen
 - Alle Datensätze bearbeiten
+- Eigene Datensätze veröffentlichen
 
 Der API Key wird nun als Umgebungsvariable benötigt.
 
