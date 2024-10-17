@@ -69,7 +69,7 @@ ODS_API_TYPE=automation/v1.0
 
 ## Usage
 
-Here’s a simple example to retrieve the number of datasets:
+Here's a simple example to retrieve the number of datasets:
 
 ```python
 import ods_utils_py as ods_utils
@@ -95,6 +95,8 @@ print(response.text)
 
 ## Further Links
 The complete documentation of the Automation API 1.0 can be found [here](https://help.opendatasoft.com/apis/ods-automation-v1/).
+
+---
 
 ## License
 
