@@ -1,15 +1,15 @@
 # ods-utils-py
-Mit `ods-utils-py` lässt sich direkt aus Python auf die Automation API von Opendatasoft zugreifen. Voraussetzung ist der Besitz eines gültigen API Schlüssels ([API-Schlüssel erstellen](#api-schlüssel-einrichten)). [Der Quellcode ist öffentlich auf Github](https://github.com/RenatoFarruggio/ods-utils-py).
+With `ods-utils-py`, the Automation API from Opendatasoft can be accessed directly from Python. A valid API key is required ([Create an API key](#set-up-api-key)). [The source code is publicly available on GitHub](https://github.com/RenatoFarruggio/ods-utils-py).
 
-## Inhaltsverzeichnis
+## Table of Contents
 
    - [Installation](#installation)
-   - [Voraussetzungen](#voraussetzungen)
-   - [Erste Schritte](#erste-schritte)
-     - [API-Schlüssel einrichten](#api-schlüssel-einrichten)
-   - [Verwendung](#verwendung)
-   - [Weiterführende Links](#weiterführende-links)
-   - [Lizenz](#lizenz)
+   - [Requirements](#requirements)
+   - [Getting Started](#getting-started)
+     - [Set up API Key](#set-up-api-key)
+   - [Usage](#usage)
+   - [Further Links](#further-links)
+   - [License](#license)
 
 ---
 
@@ -23,35 +23,35 @@ pip install ods-utils-py
 
 ---
 
-## Voraussetzungen
+## Requirements
 
-- **Python Version:** 3.11 oder höher
-- **API-Schlüssel:** Ein gültiger API-Schlüssel von Opendatasoft
+- **Python Version:** 3.11 or higher
+- **API Key:** A valid API key from Opendatasoft
 
 ---
 
-## Erste Schritte
+## Getting Started
 
-### API-Schlüssel einrichten
+### Set up API Key
 
-Um `ods-utils-py` nutzen zu können, wird ein gültiger API-Key von Opendatasoft benötigt. 
+To use `ods-utils-py`, a valid API key from Opendatasoft is required.
 
-[Für die OGD Basel kann der API Key hier erstellt werden](https://data.bs.ch/account/api-keys/).
+[For OGD Basel, the API key can be created here](https://data.bs.ch/account/api-keys/).
 
-Für die Key-Erstellung auf anderen Plattformen kann oben rechts auf die Schaltfläche mit dem Benutzernamen geklickt werden, um die Kontoeinstellungen zu öffnen. Unter API-Keys können benutzerdefinierte Keys mit den entsprechenden Berechtigungen erstellt werden. 
+For key creation on other platforms, click on the username button in the top right corner to open account settings. Under API Keys, custom keys with the appropriate permissions can be created.
 
-Der Name sollte beschreiben wofür er verwendet wird, beispielsweise `"ods_utils_py - <Initialer Name des Keys>"`
+The name should describe its purpose, for example, `"ods_utils_py - <Initial Key Name>"`
 
-Der API Key benötigt die folgenden 4 Berechtigungen:
-- Alle Datensätze durchsuchen
-- Neue Datensätze erstellen
-- Alle Datensätze bearbeiten
-- Eigene Datensätze veröffentlichen
+The API key requires the following 4 permissions:
+- Browse all datasets
+- Create new datasets
+- Edit all datasets
+- Publish own datasets
 
-Der API Key wird nun als Umgebungsvariable benötigt.
+The API key is then required as an environment variable.
 
-### Umgebungsvariablen einrichten
-Als nächstes müssen die Umgebungsvariablen definiert werden. Dafür sollte im Root-Verzeichnis eine `.env` Datei erstellt werden mit dem folgenden Inhalt, bzw. falls schon eine solche Datei existiert, die folgenden Zeilen ergänzt und ausgefüllt werden.
+### Set up Environment Variables
+Next, the environment variables must be defined. For this, a `.ods_utils_py.env` file should be created in the root directory of the project with the following content.
 
 ```text
 ODS_API_KEY=your_ods_api_key
@@ -65,33 +65,37 @@ ODS_DOMAIN=data.bs.ch
 ODS_API_TYPE=automation/v1.0
 ```
 
-## Verwendung
+**Important:** Make sure to add `**/*.env` to your .gitignore!
 
-Hier ein einfaches Beispiel, um die Anzahl der Datensätze abzurufen:
+## Usage
+
+Here’s a simple example to retrieve the number of datasets:
 
 ```python
 import ods_utils_py as ods_utils
 
 num_datasets = ods_utils.get_number_of_datasets()
-print(f"Derzeit haben wir {num_datasets} Datensätze.")
+print(f"We currently have {num_datasets} datasets.")
 ```
 
-Falls eine gewünschte Funktion nicht existiert, kann sie über _requests_utils implementiert werden:
+A list of all currently implemented functions can be found on [GitHub](https://github.com/RenatoFarruggio/ods-utils-py/tree/main/src/ods_utils_py).
+
+If a desired function does not exist, it can be implemented via _requests_utils:
 
 ```python
 import ods_utils_py as ods_utils
 
-antwort = ods_utils._requests_get("https://www.example.com")
-print(antwort.text)
+response = ods_utils._requests_get("https://www.example.com")
+print(response.text)
 ```
 
-*Hinweis:* Die meisten dieser Funktionen sollten dann langfristig in `ods_utils_py` integriert werden.
+*Note:* Most of these functions should eventually be integrated into `ods_utils_py`.
 
 ---
 
-## Weiterführende Links
-Die vollständige Dokumentation der Automation API 1.0 ist [hier](https://help.opendatasoft.com/apis/ods-automation-v1/) zu finden.
+## Further Links
+The complete documentation of the Automation API 1.0 can be found [here](https://help.opendatasoft.com/apis/ods-automation-v1/).
 
-## Lizenz
+## License
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die [LICENSE](LICENSE) Datei im Repository für den vollständigen Lizenztext.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file in the repository for the full license text.
