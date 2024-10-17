@@ -1,7 +1,6 @@
 # ods-utils-py
 Mit `ods-utils-py` lässt sich direkt aus Python auf die Automation API von Opendatasoft zugreifen. Voraussetzung ist der Besitz eines gültigen API Schlüssels ([API-Schlüssel erstellen](#api-schlüssel-einrichten)). [Der Quellcode ist öffentlich auf Github](https://github.com/RenatoFarruggio/ods-utils-py).
 
-
 ## Inhaltsverzeichnis
 
    - [Installation](#installation)
