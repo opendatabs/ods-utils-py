@@ -4,7 +4,7 @@ import ods_utils_py as ods_utils
 import json
 
 def main():
-    if False: # For testing get_number_of_datasets
+    if True: # For testing get_number_of_datasets
         print("Trying to retrieve count of all datasets")
         total_num = ods_utils.get_number_of_datasets()
         print("Total number of datasets:", total_num)
@@ -26,7 +26,7 @@ def main():
     if False: # For testing set_dataset_public
         dataset_id = 100397
         print(f"Trying to publish dataset {dataset_id}")
-        ods_utils.set_dataset_public(dataset_id=100397, True)
+        ods_utils.set_dataset_public(dataset_id=100397, publish=True)
         print("Done.")
 
     if False: # For testing set_dataset_license
