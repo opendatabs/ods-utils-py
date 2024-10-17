@@ -19,6 +19,11 @@ def load_environment_variable(key):
         value = os.getenv(key)
         return value
 
+    elif os.path.exists('../.env'):
+        load_dotenv('../.env')
+        value = os.getenv(key)
+        return value
+
     elif os.path.exists('credentials.py'):
         try:
             import credentials
