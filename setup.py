@@ -11,7 +11,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="ods_utils_py",
-    version="0.1.7",
+    version="0.1.8",
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     description="A python wrapper library for the ODS Automation API",
