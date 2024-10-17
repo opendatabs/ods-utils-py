@@ -28,9 +28,6 @@ This guide provides instructions on setting up the development environment, addi
    ```bash
    git checkout develop
    ```
-
-   *Note:* If `develop` is already the default branch, you are already on it after cloning. This step ensures you are on the correct branch if multiple branches exist.
-   
    **IMPORTANT:** Never push directly to the `main` branch!
 
 4. **Set Up Environment Variables**
@@ -98,9 +95,10 @@ Using the `-e` (editable) flag ensures that the package needs to be installed on
 
 When adding a new function to the package, use the following steps to ensure consistency across the codebase:
 
-1. Copy the template file: `get_number_of_datasets.py`.
+1. Copy the template file: `src/ods_utils_py/get_number_of_datasets.py`.
 2. Follow the structure and code style present in the template when implementing the new function.
 3. Document the function with clear and concise docstrings following standard Python conventions (e.g., describing arguments, return values, and any exceptions raised) **where deemed necessary**.
+Add unit tests. Check out the file `tests/test_get_number_of_datasets.py` as a reference.
 
 ---
 
@@ -133,11 +131,7 @@ As our project grows, we may introduce specific naming conventions for functions
 
 Examples of good function names:
 - `get_dataset_info`
-- `calculate_average_score`
+- `update_dataset_licences`
 - `validate_user_input`
-
-We may introduce more specific conventions in the future, such as prefixes or suffixes for certain types of functions. As these conventions are established, they will be documented here.
-
-**Note:** This section will be updated with more detailed conventions as the project evolves and requires additional structure.
 
 ---

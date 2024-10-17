@@ -1,13 +1,12 @@
-import pkgutil
-import importlib
-
 from ._config import _check_all_environment_variables_are_set
 
 _check_all_environment_variables_are_set()
 
-# Automatically import all modules in this package
-for loader, module_name, is_pkg in pkgutil.walk_packages(__path__):
-    module = importlib.import_module(f"{__name__}.{module_name}")
-    # Import all functions defined in __all__ from the module
-    if hasattr(module, '__all__'):
-        globals().update({name: getattr(module, name) for name in module.__all__})
+
+### Public Methods ###
+from .get_dataset_custom_view import get_dataset_custom_view
+from .get_dataset_license import get_dataset_license
+from .get_number_of_datasets import get_number_of_datasets
+from .get_uid_by_id import get_uid_by_id
+from .set_dataset_license import set_dataset_license
+from .set_dataset_public import set_dataset_public
