@@ -54,7 +54,7 @@ Der API Key wird nun als Umgebungsvariable benötigt.
 Als nächstes müssen die Umgebungsvariablen definiert werden. Dafür sollte im Root-Verzeichnis eine `.env` Datei erstellt werden mit dem folgenden Inhalt, bzw. falls schon eine solche Datei existiert, die folgenden Zeilen ergänzt und ausgefüllt werden.
 
 ```text
-ODS_API_KEY=your_api_key
+ODS_API_KEY=your_ods_api_key
 
 PROXY_USER=your_proxy_user
 PROXY_PASSWORD=your_proxy_password
