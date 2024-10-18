@@ -3,7 +3,21 @@ from ._requests_utils import *  # imports requests_get, requests_post, etc.
 from ._config import get_base_url
 
 # I found these manually, by changing it in ods, and retrieving through the API. Please adapt if an error occurs!
-_currently_valid_ids = ['cc_by', 't2kf10u', '5sylls5', '4bj8ceb', 'hmpvfpp', 'ce0mv1b', 'vzo5u7j', 'r617wgj']
+_currently_valid_ids = ['cc_by', 't2kf10u', '5sylls5', '4bj8ceb', 'hmpvfpp', 'ce0mv1b', 'vzo5u7j', 'r617wgj', '353v4r']
+
+def get_name_of_license_id(license_id: str) -> str:
+    license_dict = {
+        'cc_by': 'CC BY 3.0 CH',
+        't2kf10u': 'CC BY 3.0 CH + OpenStreetMap',
+        '5sylls5': 'CC BY 4.0',
+        '353v4r': 'CC BY 4.0 + OpenStreetMap',
+        '4bj8ceb': 'CC0 1.0',
+        'hmpvfpp': 'Freie Nutzung. Kommerzielle Nutzung nur mit Bewilligung des Datenlieferanten zulässig.',
+        'ce0mv1b': 'Freie Nutzung. Quellenangabe ist Pflicht. Kommerzielle Nutzung nur mit Bewilligung des Datenlieferanten zulässig.',
+        'vzo5u7j': 'GNU General Public License 3',
+        'r617wgj': 'Nutzungsbedingungen für Geodaten des Kantons Basel-Stadt',
+    }
+    return license_dict[license_id]
 
 def get_dataset_license(dataset_id: int = None, dataset_uid: str = None,
                         no_license_default_value: str = "NO LICENSE") -> str:
@@ -22,6 +36,7 @@ def get_dataset_license(dataset_id: int = None, dataset_uid: str = None,
             - 'cc_by'   for 'CC BY 3.0 CH'
             - 't2kf10u' for 'CC BY 3.0 CH + OpenStreetMap'
             - '5sylls5' for 'CC BY 4.0'
+            - '353v4r'  for 'CC BY 4.0 + OpenStreetMap'
             - '4bj8ceb' for 'CC0 1.0'
             - 'hmpvfpp' for 'Freie Nutzung. Kommerzielle Nutzung nur mit Bewilligung des Datenlieferanten zulässig.'
             - 'ce0mv1b' for 'Freie Nutzung. Quellenangabe ist Pflicht. Kommerzielle Nutzung nur mit Bewilligung des
@@ -43,9 +58,7 @@ def get_dataset_license(dataset_id: int = None, dataset_uid: str = None,
         exit(f"Error: no_license_default_value ({no_license_default_value}) must not appear in {_currently_valid_ids}")
 
     r = requests_get(url=f"{base_url}/datasets/{dataset_uid}")
-
-    if not r.ok:
-        r.raise_for_status()
+    r.raise_for_status()
 
     lic_text = r.json()['metadata']['internal'].get('license_id', {}).get('value', no_license_default_value)
 
