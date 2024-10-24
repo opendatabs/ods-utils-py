@@ -7,6 +7,7 @@ _check_all_environment_variables_are_set()
 from .get_dataset_custom_view import get_dataset_custom_view
 from .get_dataset_license import get_dataset_license
 from .get_dataset_metadata_temporal_period import get_dataset_metadata_temporal_period
+from .get_all_dataset_ids import get_all_dataset_ids
 from .get_number_of_datasets import get_number_of_datasets
 from .get_uid_by_id import get_uid_by_id
 from .set_dataset_license import set_dataset_license
