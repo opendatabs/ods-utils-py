@@ -137,3 +137,5 @@ cython_debug/
 
 # Credential files. Should not exist in this project, but in case they do, we don't want to accidentally upload them
 **/credentials.py
+
+debugging_script_renato.py

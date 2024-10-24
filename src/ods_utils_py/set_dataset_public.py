@@ -2,7 +2,7 @@ from .get_uid_by_id import get_uid_by_id
 from ._requests_utils import *  # imports requests_get, requests_post, etc.
 from ._config import get_base_url
 
-def set_dataset_public(dataset_id: int = None, dataset_uid: str = None, should_be_public: bool = True) -> None:
+def set_dataset_public(dataset_id: str = None, dataset_uid: str = None, should_be_public: bool = True) -> None:
     """
     Used to publish or unpublish a dataset.
 
@@ -10,7 +10,7 @@ def set_dataset_public(dataset_id: int = None, dataset_uid: str = None, should_b
 
     Args:
         should_be_public (bool, optional): Set True to publish the dataset, set False to unpublish the dataset
-        dataset_id (int, optional): The unique integer identifier of the dataset.
+        dataset_id (str, optional): The unique integer identifier of the dataset.
         dataset_uid (str, optional): The unique string identifier (UID) of the dataset.
     """
     if dataset_id is not None and dataset_uid is not None:

@@ -11,7 +11,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="ods_utils_py",
-    version="0.1.11",
+    version="0.1.12",
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     description="A python wrapper library for the ODS Automation API",
@@ -27,5 +27,5 @@ setup(
     python_requires='>=3.11',
     long_description=readme_text,
     long_description_content_type="text/markdown",
-    url='https://github.com/RenatoFarruggio/ods-utils-py/'
+    url='https://github.com/opendatasoft/ods-utils-py/'
 )
