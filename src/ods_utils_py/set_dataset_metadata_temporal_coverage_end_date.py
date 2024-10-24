@@ -14,7 +14,7 @@ def set_dataset_metadata_temporal_coverage_end_date(temporal_coverage_end_date: 
 
     Args:
         temporal_coverage_end_date (str | datetime | None): The end date of the temporal coverage. Set it to None to
-            delete it. If it is a string, it has to be of the form DD.MM.YYYY
+            delete it. If it is a string, it has to be of the form YYYY-MM-DD
         dataset_id (str, optional): The unique integer identifier of the dataset.
         dataset_uid (str, optional): The unique string identifier (UID) of the dataset.
         publish (bool, optional): When set to true, the dataset is also published. This should only be disabled when making
@@ -33,7 +33,7 @@ def set_dataset_metadata_temporal_coverage_end_date(temporal_coverage_end_date: 
     base_url = get_base_url()
 
     if type(temporal_coverage_end_date) == str:
-        temporal_coverage_end_date = datetime.strptime(temporal_coverage_end_date, "%d.%m.%Y")
+        temporal_coverage_end_date = datetime.strptime(temporal_coverage_end_date, "%Y-%m-%d")
 
     r = requests_get(url=f"{base_url}/datasets/{dataset_uid}/metadata/")
     r.raise_for_status()
