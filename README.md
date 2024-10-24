@@ -1,5 +1,5 @@
 # ods-utils-py
-With `ods-utils-py`, the Automation API from Opendatasoft can be accessed directly from Python. A valid API key is required ([Create an API key](#set-up-api-key)). [The source code is publicly available on GitHub](https://github.com/RenatoFarruggio/ods-utils-py).
+With `ods-utils-py`, the Automation API from Opendatasoft can be accessed directly from Python. A valid API key is required ([Create an API key](#set-up-api-key)). [The source code is publicly available on GitHub](https://github.com/opendatabs/ods-utils-py).
 
 ## Table of Contents
 
@@ -67,7 +67,7 @@ ODS_DOMAIN=data.bs.ch
 ODS_API_TYPE=automation/v1.0
 ```
 
-**Important:** Make sure to add `**/*.env` to your .gitignore!
+**Important:** Make sure to add `**/*.env` to your .gitignore to not upload the credentials to the internet!
 
 ## Usage
 
@@ -80,7 +80,7 @@ num_datasets = ods_utils.get_number_of_datasets()
 print(f"We currently have {num_datasets} datasets.")
 ```
 
-A list of all currently implemented functions can be found on [GitHub](https://github.com/RenatoFarruggio/ods-utils-py/tree/main/src/ods_utils_py).
+A list of all currently implemented functions can be found on [GitHub](https://github.com/opendatabs/ods-utils-py/tree/main/src/ods_utils_py).
 
 If a desired function does not exist, it can be implemented via _requests_utils:
 
@@ -91,7 +91,7 @@ response = ods_utils._requests_get("https://www.example.com")
 print(response.text)
 ```
 
-*Note:* Most of these functions should eventually be integrated into `ods_utils_py`.
+*Note:* Most of these functions should eventually be integrated into `ods_utils_py` if they use the Automation API.
 
 ---
 
@@ -103,3 +103,5 @@ The complete documentation of the Automation API 1.0 can be found [here](https:/
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file in the repository for the full license text.
+
+---

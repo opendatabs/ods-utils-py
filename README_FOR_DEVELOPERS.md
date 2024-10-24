@@ -15,7 +15,7 @@ This guide provides instructions on setting up the development environment, addi
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/RenatoFarruggio/ods-utils-py.git
+   git clone https://github.com/opendatabs/ods-utils-py.git
    ```
 
 2. **Change to the Project Directory**
