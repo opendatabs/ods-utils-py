@@ -20,6 +20,7 @@ load_dotenv(env_path)
 
 def _check_all_environment_variables_are_set():
     environment_variables = ["ODS_API_KEY",
+                             "USE_PROXY",
                              "PROXY_USER",
                              "PROXY_PASSWORD",
                              "PROXY_ADDRESS",
@@ -58,14 +59,24 @@ def _get_headers():
     return _headers
 
 def _get_proxies() -> dict[str, str]:
-    proxy_user = os.getenv("PROXY_USER")
-    proxy_password = os.getenv("PROXY_PASSWORD")
-    proxy_address = os.getenv("PROXY_ADDRESS")
-    proxy_port = os.getenv("PROXY_PORT")
+    use_proxy = os.getenv("USE_PROXY")
+    if use_proxy.lower() == 'false':
+        proxies = None
 
-    proxy = f"http://{proxy_user}:{proxy_password}@{proxy_address}:{proxy_port}/"
-    proxies = {
-        "http": proxy,
-        "https": proxy,
-    }
+    elif use_proxy.lower() == 'true':
+        proxy_user = os.getenv("PROXY_USER")
+        proxy_password = os.getenv("PROXY_PASSWORD")
+        proxy_address = os.getenv("PROXY_ADDRESS")
+        proxy_port = os.getenv("PROXY_PORT")
+
+        proxy = f"http://{proxy_user}:{proxy_password}@{proxy_address}:{proxy_port}/"
+        proxies = {
+            "http": proxy,
+            "https": proxy,
+        }
+
+    else:
+        raise ValueError(f"The value USE_PROXY in the .ods_utils_py.env is {use_proxy}, but should be 'true' or 'false' "
+                         f"(case insensitive)")
+
     return proxies

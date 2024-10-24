@@ -56,6 +56,8 @@ Next, the environment variables must be defined. For this, a `.ods_utils_py.env`
 ```text
 ODS_API_KEY=your_ods_api_key
 
+USE_PROXY=true
+
 PROXY_USER=your_proxy_user
 PROXY_PASSWORD=your_proxy_password
 PROXY_ADDRESS=your_proxy_address
