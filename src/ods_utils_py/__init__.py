@@ -6,7 +6,11 @@ _check_all_environment_variables_are_set()
 ### Public Methods ###
 from .get_dataset_custom_view import get_dataset_custom_view
 from .get_dataset_license import get_dataset_license
+from .get_dataset_metadata_temporal_period import get_dataset_metadata_temporal_period
 from .get_number_of_datasets import get_number_of_datasets
 from .get_uid_by_id import get_uid_by_id
 from .set_dataset_license import set_dataset_license
+from .set_dataset_metadata_temporal_coverage_end_date import set_dataset_metadata_temporal_coverage_end_date
+from .set_dataset_metadata_temporal_coverage_start_date import set_dataset_metadata_temporal_coverage_start_date
+from .set_dataset_metadata_temporal_period import set_dataset_metadata_temporal_period
 from .set_dataset_public import set_dataset_public
