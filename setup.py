@@ -27,5 +27,5 @@ setup(
     python_requires='>=3.11',
     long_description=readme_text,
     long_description_content_type="text/markdown",
-    url='https://github.com/RenatoFarruggio/ods-utils-py/'
+    url='https://github.com/opendatasoft/ods-utils-py/'
 )
