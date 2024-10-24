@@ -19,14 +19,14 @@ def get_name_of_license_id(license_id: str) -> str:
     }
     return license_dict[license_id]
 
-def get_dataset_license(dataset_id: int = None, dataset_uid: str = None,
+def get_dataset_license(dataset_id: str = None, dataset_uid: str = None,
                         no_license_default_value: str = "NO LICENSE") -> str:
     """
     Retrieve the license identifier for a dataset. Either `dataset_id` or `dataset_uid` can be used to specify the
     dataset.
 
     Args:
-        dataset_id (int, optional): The unique integer identifier of the dataset.
+        dataset_id (str, optional): The unique integer identifier of the dataset.
         dataset_uid (str, optional): The unique string identifier (UID) of the dataset.
         no_license_default_value (str, optional): The default value to return if no license is found.
 

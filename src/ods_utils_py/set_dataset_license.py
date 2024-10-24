@@ -5,7 +5,7 @@ from ._config import get_base_url
 from .get_dataset_license import _currently_valid_ids
 import time
 
-def set_dataset_license(license_id: str, dataset_id: int = None, dataset_uid: str = None, publish: bool = True) -> None:
+def set_dataset_license(license_id: str, dataset_id: str = None, dataset_uid: str = None, publish: bool = True) -> None:
     """
     Set the license identifier for a dataset. Either `dataset_id` or `dataset_uid` can be used to specify the
     dataset.
@@ -13,7 +13,7 @@ def set_dataset_license(license_id: str, dataset_id: int = None, dataset_uid: st
     Args:
         license_id (str): The license_id the dataset should be set to. Please refer to the documentation of
             get_dataset_license for the exact string required.
-        dataset_id (int, optional): The unique integer identifier of the dataset.
+        dataset_id (str, optional): The unique integer identifier of the dataset.
         dataset_uid (str, optional): The unique string identifier (UID) of the dataset.
         publish (bool, optional): When set to true, the dataset is also published. This should only be disabled when making
             several changes. In this case, the dataset should be published when all changes are applied.

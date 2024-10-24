@@ -7,7 +7,7 @@ from ._requests_utils import *  # imports requests_get, requests_post, etc.
 from ._config import get_base_url
 import time
 
-def set_dataset_metadata_temporal_coverage_start_date(temporal_coverage_start_date: str | datetime | None, dataset_id: int = None, dataset_uid: str = None, publish: bool = True, should_override_remote_value: bool = True, tzinfo: ZoneInfo =ZoneInfo("Europe/Zurich")) -> None:
+def set_dataset_metadata_temporal_coverage_start_date(temporal_coverage_start_date: str | datetime | None, dataset_id: str = None, dataset_uid: str = None, publish: bool = True, should_override_remote_value: bool = True, tzinfo: ZoneInfo =ZoneInfo("Europe/Zurich")) -> None:
     """
     Set the temporal coverage start date for a dataset. Either `dataset_id` or `dataset_uid` can be used to specify the
     dataset.
@@ -15,7 +15,7 @@ def set_dataset_metadata_temporal_coverage_start_date(temporal_coverage_start_da
     Args:
         temporal_coverage_start_date (str | datetime | None): The start date of the temporal coverage. Set it to None to
             delete it. If it is a string, it has to be of the form DD.MM.YYYY
-        dataset_id (int, optional): The unique integer identifier of the dataset.
+        dataset_id (str, optional): The unique integer identifier of the dataset.
         dataset_uid (str, optional): The unique string identifier (UID) of the dataset.
         publish (bool, optional): When set to true, the dataset is also published. This should only be disabled when making
             several changes. In this case, the dataset should be published when all changes are applied.

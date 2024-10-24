@@ -2,7 +2,7 @@ from .get_uid_by_id import get_uid_by_id
 from ._requests_utils import *  # imports requests_get, requests_post, etc.
 from ._config import get_base_url
 
-def get_dataset_custom_view(dataset_id: int = None, dataset_uid: str = None) -> dict:
+def get_dataset_custom_view(dataset_id: str = None, dataset_uid: str = None) -> dict:
     """
     Returns a custom_view dictionary. Can be specified by either the dataset_id or the dataset_uid.
     Args:
