@@ -101,6 +101,16 @@ Add unit tests. Check out the file `tests/test_get_number_of_datasets.py` as a r
 
 ---
 
+## Publishing New Version on PyPI
+
+Publishing new versions works with GitHub Actions. To publish a new version, follow these steps:
+
+1. Update the version in setup.py
+2. Push to `develop` branch
+3. Pull Request into `main` with message "Update to version x.x.x"
+
+---
+
 ## Commit Message Guidelines
 
 Commit messages should be meaningful and follow a clear format. Each commit message should complete the sentence:
