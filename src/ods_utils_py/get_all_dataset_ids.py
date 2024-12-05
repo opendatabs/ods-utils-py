@@ -18,7 +18,11 @@ def get_all_dataset_ids(include_restricted: bool = True) -> [str]:
     all_ids = []
 
     while True:
-        all_ids += [item['dataset_id'] for item in r.json().get('results', {})]
+        if include_restricted:
+            all_ids += [item['dataset_id'] for item in r.json().get('results', {})]
+        else:
+            all_ids += [item['dataset_id'] for item in r.json().get('results', {}) if not item['is_restricted']]
+
         next_request_url = r.json().get('next', None)
 
         if not next_request_url:
