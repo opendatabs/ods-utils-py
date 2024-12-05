@@ -66,6 +66,9 @@ def set_dataset_metadata_temporal_coverage_end_date(temporal_coverage_end_date: 
 
     # Wait for dataset to be idle before updating metadata
     while requests_get(url=f"{base_url}/datasets/{dataset_uid}/status").json()['status'] != "idle":
+        if requests_get(url=f"{base_url}/datasets/{dataset_uid}/status").json()['status'] == 'error':
+            logging.warning(f"Dataset seems to be in an error state; skipping without applying changes...")
+            return
         time.sleep(3)
 
     r = requests_put(url=f"{base_url}/datasets/{dataset_uid}/metadata/", json=updated_json)
