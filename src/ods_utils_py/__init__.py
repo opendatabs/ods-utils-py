@@ -7,6 +7,7 @@ _check_all_environment_variables_are_set()
 from ._requests_utils import requests_get, requests_put, requests_delete, requests_patch, requests_post
 from .get_dataset_custom_view import get_dataset_custom_view
 from .get_dataset_license import get_dataset_license
+from .get_dataset_metadata import get_dataset_metadata
 from .get_dataset_metadata_temporal_period import get_dataset_metadata_temporal_period
 from .get_dataset_title import get_dataset_title
 from .get_all_dataset_ids import get_all_dataset_ids
