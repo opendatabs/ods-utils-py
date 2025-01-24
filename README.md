@@ -87,7 +87,7 @@ If a desired function does not exist, it can be implemented via _requests_utils:
 ```python
 import ods_utils_py as ods_utils
 
-response = ods_utils._requests_get("https://www.example.com")
+response = ods_utils._requests_utils.requests_get("https://www.example.com")
 print(response.text)
 ```
 

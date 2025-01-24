@@ -4,6 +4,7 @@ _check_all_environment_variables_are_set()
 
 
 ### Public Methods ###
+from ._requests_utils import requests_get, requests_put, requests_delete, requests_patch, requests_post
 from .get_dataset_custom_view import get_dataset_custom_view
 from .get_dataset_license import get_dataset_license
 from .get_dataset_metadata_temporal_period import get_dataset_metadata_temporal_period
