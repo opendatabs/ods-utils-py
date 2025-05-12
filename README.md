@@ -56,13 +56,6 @@ Next, the environment variables must be defined. For this, a `.ods_utils_py.env`
 ```text
 ODS_API_KEY=your_ods_api_key
 
-USE_PROXY=true
-
-PROXY_USER=your_proxy_user
-PROXY_PASSWORD=your_proxy_password
-PROXY_ADDRESS=your_proxy_address
-PROXY_PORT=your_proxy_port
-
 ODS_DOMAIN=data.bs.ch
 ODS_API_TYPE=automation/v1.0
 ```
