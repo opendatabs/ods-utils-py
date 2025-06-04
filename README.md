@@ -61,7 +61,6 @@ ODS_API_TYPE=automation/v1.0
 ```
 
 **Important:** Make sure to add `**/.env` to your .gitignore to not upload the credentials to the internet!  
-*Note:* If you are not using a proxy, set `USE_PROXY` to `false`. In this case, the `PROXY_*` fields do not have to be changed.
 
 ## Usage
 
