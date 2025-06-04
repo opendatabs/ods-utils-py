@@ -3,13 +3,16 @@ With `ods-utils-py`, the Automation API from Opendatasoft can be accessed direct
 
 ## Table of Contents
 
-   - [Installation](#installation)
-   - [Requirements](#requirements)
-   - [Getting Started](#getting-started)
-     - [Set up API Key](#set-up-api-key)
-   - [Usage](#usage)
-   - [Further Links](#further-links)
-   - [License](#license)
+- [ods-utils-py](#ods-utils-py)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Requirements](#requirements)
+  - [Getting Started](#getting-started)
+    - [Set up API Key](#set-up-api-key)
+    - [Set up Environment Variables](#set-up-environment-variables)
+  - [Usage](#usage)
+  - [Further Links](#further-links)
+  - [License](#license)
 
 ---
 
@@ -61,7 +64,7 @@ ODS_API_TYPE=automation/v1.0
 ```
 
 **Important:** Make sure to add `**/.env` to your .gitignore to not upload the credentials to the internet!  
-*Note:* If you are not using a proxy, set `USE_PROXY` to `false`. In this case, the `PROXY_*` fields do not have to be changed.
+*Note:* If you are behind a proxy, set `http_proxy` and `https_proxy` accordingly
 
 ## Usage
 
