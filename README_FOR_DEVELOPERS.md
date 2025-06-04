@@ -30,16 +30,7 @@ This guide provides instructions on setting up the development environment, addi
    **IMPORTANT:** Never push directly to the `main` branch!
 
 4. **Set Up Environment Variables**
-   Copy your [`.ods_utils_py.env.template`](.ods_utils_py.env.template) and rename it to `.ods_utils_py.env`:
-   - **Windows**
-     ```cmd
-     copy .ods_utils_py.env.template .ods_utils_py.env
-     ```
-   - **Mac/Linux**
-     ```bash
-     cp .ods_utils_py.env.template .ods_utils_py.env
-     ```
-   Open the `.ods_utils_py.env` file and fill in your credentials and other required information.
+   (See README.md)
 
 ---
 

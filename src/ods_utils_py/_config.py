@@ -5,18 +5,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 import os
 
-current_dir = Path(__file__).resolve().parent
-
-environment_filename = ".ods_utils_py.env"
-
-project_root = current_dir
-while not (project_root / environment_filename).exists():
-    if project_root.parent == project_root:
-        raise FileNotFoundError(f"Could not find the {environment_filename} file in any parent directory")
-    project_root = project_root.parent
-
-env_path = project_root / environment_filename
-load_dotenv(env_path)
+load_dotenv()
 
 def _check_all_environment_variables_are_set():
     environment_variables = ["ODS_API_KEY",
@@ -26,10 +15,10 @@ def _check_all_environment_variables_are_set():
     for environment_variable in environment_variables:
         ev = os.getenv(environment_variable)
         if not ev:
-            raise ValueError(f"{environment_variable} not found in the {environment_filename} file. "
+            raise ValueError(f"{environment_variable} not found in the .env file. "
                              f"Please define it as '{environment_variable}'.")
         if ev == "your_" + environment_variable.lower():
-            raise ValueError(f"Please define the environment variable '{environment_variable}' in the {environment_filename} file.")
+            raise ValueError(f"Please define the environment variable '{environment_variable}' in the .env file.")
 
 
 def get_base_url() -> str:

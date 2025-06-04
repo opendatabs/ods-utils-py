@@ -51,16 +51,17 @@ The API key requires the following 4 permissions:
 The API key is then required as an environment variable.
 
 ### Set up Environment Variables
-Next, the environment variables must be defined. For this, a `.ods_utils_py.env` file should be created in the root directory of the project with the following content.
+Next, the environment variables must be defined. For this, add a `.env` file in the root directory with the following content. If a `.env` already exists, just append the following content:
 
-```text
+```.env
 ODS_API_KEY=your_ods_api_key
 
 ODS_DOMAIN=data.bs.ch
 ODS_API_TYPE=automation/v1.0
 ```
 
-**Important:** Make sure to add `**/*.env` to your .gitignore to not upload the credentials to the internet!
+**Important:** Make sure to add `**/.env` to your .gitignore to not upload the credentials to the internet!  
+*Note:* If you are not using a proxy, set `USE_PROXY` to `false`. In this case, the `PROXY_*` fields do not have to be changed.
 
 ## Usage
 
