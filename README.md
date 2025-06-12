@@ -1,18 +1,6 @@
 # ods-utils-py
 With `ods-utils-py`, the Automation API from Opendatasoft can be accessed directly from Python. A valid API key is required ([Create an API key](#set-up-api-key)). [The source code is publicly available on GitHub](https://github.com/opendatabs/ods-utils-py).
 
-## Table of Contents
-
-   - [Installation](#installation)
-   - [Requirements](#requirements)
-   - [Getting Started](#getting-started)
-     - [Set up API Key](#set-up-api-key)
-   - [Usage](#usage)
-   - [Further Links](#further-links)
-   - [License](#license)
-
----
-
 ## Installation
 
 Installation via `pip`:
