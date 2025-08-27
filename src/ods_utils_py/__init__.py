@@ -20,4 +20,3 @@ from .set_dataset_metadata_temporal_coverage_start_date import set_dataset_metad
 from .set_dataset_metadata_temporal_period import set_dataset_metadata_temporal_period
 from .set_dataset_public import set_dataset_public
 from .set_template_metadata import set_template_metadata
-from .get_template_metadata import get_template_metadata
