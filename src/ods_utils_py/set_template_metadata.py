@@ -2,11 +2,10 @@ from typing import Any, Dict, Optional
 from .get_uid_by_id import get_uid_by_id
 from ._requests_utils import *  # requests_get, requests_put, ...
 from ._config import get_base_url
-from .set_dataset_public import set_dataset_public
 
 
 def set_template_metadata( template_name: str, payload: Dict[str, Any], field_name: Optional[str] = None, *,
-    dataset_id: Optional[str] = None,dataset_uid: Optional[str] = None, publish: bool = True) -> Dict[str, Any]:
+    dataset_id: Optional[str] = None,dataset_uid: Optional[str] = None) -> Dict[str, Any]:
     """
     Generic setter for dataset metadata.
 
@@ -39,7 +38,4 @@ def set_template_metadata( template_name: str, payload: Dict[str, Any], field_na
 
     r = requests_put(url=url, json=payload)
     r.raise_for_status()
-
-    if publish:
-        set_dataset_public(dataset_uid=dataset_uid)
     return r.json()
