@@ -40,6 +40,7 @@ def set_template_metadata( template_name: str, payload: Dict[str, Any], field_na
     r = requests_put(url=url, json=payload)
     r.raise_for_status()
 
+
     if publish:
         set_dataset_public(dataset_uid=dataset_uid)
     return r.json()
